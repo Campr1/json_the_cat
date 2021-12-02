@@ -11,5 +11,5 @@ request(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`, (error, respons
   
   const data = JSON.parse(body);
  
-  console.log(data[0].description)
+  console.log(data[0].description);
 });
