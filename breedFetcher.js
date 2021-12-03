@@ -6,13 +6,10 @@ const fetchBreedDescription = function(breed, callback) {
   request(url, (error, response, body) => {
     const data = JSON.parse(body);
     if (data.length === 0) {
-      callback(null);
+      callback("No breed detected", null);
       return;
     }
-    if (error) {
-      console.log("API Error", error.message);
-      return;
-    }
+   
     callback(null, data[0].description);
   });
 };
